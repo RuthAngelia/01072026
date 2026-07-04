@@ -1,6 +1,0 @@
-{
-  "name": "LandingPage Generator",
-  "description": "Create, edit, preview and export highly polished responsive landing pages for ebooks, courses, digital products, and services.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
