@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voltzy</title>
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    body {
+      background-color: #fffdfa;
+      color: #292524;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen selection:bg-[#d97706] selection:text-white">
+
+  
+  <nav class="sticky top-0 z-50 backdrop-blur-md border-b" style="background-color: #fffdfae6; border-color: #d9770620;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center text-white font-black" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+          S
+        </div>
+        
+        <span class="font-extrabold text-lg tracking-tight" style="color: #292524; font-family: Playfair Display;">SaaS Blueprint</span>
+      </div>
+      <div class="flex items-center gap-4">
+        
+        <a href="https://wa.me/628123456789" target="_blank" rel="noopener" class="text-xs sm:text-sm font-semibold hover:opacity-80 transition-opacity hidden sm:block" style="color: #292524;">Tanya Kami</a>
+        
+        <a href="#offers" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-white shadow-lg transition-transform active:scale-95" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+          Beli Sekarang
+        </a>
+      </div>
+    </div>
+  </nav>
+  
+        <header class="relative py-16 sm:py-24 overflow-hidden border-b" style="border-color: #d9770610;">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div class="lg:col-span-7 space-y-6">
+                
+                <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider text-white" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+                  NEW TO TOWN!
+                </span>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none" style="color: #292524; font-family: Playfair Display;">
+                  Tak perlu khawatir tagihan listrik yang melonjak ada kami!
+                </h1>
+                <p class="text-base sm:text-lg opacity-80 leading-relaxed max-w-2xl" style="color: #292524;">
+                  Panduan lengkap langkah-demi-langkah dari ideasi, pembuatan produk, hingga mendapatkan 100 pelanggan berbayar pertama dalam waktu 30 hari.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                  <a href="#offers" class="px-8 py-4 rounded-xl text-center text-white font-extrabold text-base shadow-xl hover:opacity-90 active:scale-[0.98] transition-all" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+                    Dapatkan Akses Sekarang
+                  </a>
+                  
+                  <a href="https://wa.me/628123456789" target="_blank" rel="noopener" class="px-8 py-4 rounded-xl text-center font-bold text-base border hover:bg-black/5 active:scale-[0.98] transition-all flex items-center justify-center gap-2" style="color: #292524; border-color: #d9770640;">
+                    <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.975 14.067.953 11.453.951c-5.438 0-9.864 4.372-9.868 9.8c-.001 1.714.452 3.39 1.311 4.877L1.87 20.36l4.777-1.206z"/></svg>
+                    Tanya Lewat WhatsApp
+                  </a>
+                  
+                </div>
+
+                <!-- Problem Setup / Agitate Section -->
+                
+                <div class="mt-8 p-6 rounded-2xl border" style="background-color: #d9770605; border-color: #d9770615;">
+                  <h3 class="text-lg font-bold flex items-center gap-2 mb-2" style="color: #d97706;">
+                    <svg class="w-5 h-5 shrink-0 text-red-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    Mengapa 95% Developer Gagal Meluncurkan Produk?
+                  </h3>
+                  <p class="text-sm opacity-80 leading-relaxed" style="color: #292524;">
+                    Mereka terlalu fokus menulis kode, mengabaikan validasi pasar, dan tidak tahu cara melakukan pemasaran. Jangan biarkan kerja kerasmu berakhir sia-sia.
+                  </p>
+                </div>
+                
+              </div>
+
+              <div class="lg:col-span-5 flex justify-center">
+                
+                <div class="w-full max-w-sm aspect-[4/3] rounded-3xl bg-slate-100 flex flex-col items-center justify-center p-6 text-center border-2 border-dashed border-slate-300 relative">
+                  <svg class="w-12 h-12 text-slate-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                  <span class="text-sm font-bold text-slate-700 block mb-1">Voltzy</span>
+                  <span class="text-xs text-slate-500">Ganti gambar mockup di Editor tab Hero</span>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </header>
+        
+        <section class="py-16 sm:py-24 border-b" style="border-color: #d9770610;">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+              <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #292524; font-family: Playfair Display;">
+                Apa Saja yang Akan Anda Pelajari?
+              </h2>
+              <p class="text-base sm:text-lg opacity-75" style="color: #292524;">
+                Kurikulum praktis yang disusun khusus untuk membantu Anda melompati semua trial-and-error selama bertahun-tahun.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              
+              <div class="p-8 rounded-2xl border bg-white/50 backdrop-blur-sm shadow-md flex flex-col justify-between" style="border-color: #d9770615;">
+                <div class="space-y-4">
+                  <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  </div>
+                  <h3 class="text-xl font-bold font-sans" style="color: #292524;">
+                    Metodologi Validasi Kilat
+                  </h3>
+                  <p class="text-sm opacity-80 leading-relaxed" style="color: #292524;">
+                    Cara memvalidasi ide produk Anda dalam 48 jam sebelum menulis satu baris kode pun.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="p-8 rounded-2xl border bg-white/50 backdrop-blur-sm shadow-md flex flex-col justify-between" style="border-color: #d9770615;">
+                <div class="space-y-4">
+                  <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                  </div>
+                  <h3 class="text-xl font-bold font-sans" style="color: #292524;">
+                    Arsitektur Boilerplate Siap Pakai
+                  </h3>
+                  <p class="text-sm opacity-80 leading-relaxed" style="color: #292524;">
+                    Gunakan template kode kami untuk setup sistem pembayaran, autentikasi, dan database dalam 5 menit.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="p-8 rounded-2xl border bg-white/50 backdrop-blur-sm shadow-md flex flex-col justify-between" style="border-color: #d9770615;">
+                <div class="space-y-4">
+                  <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                  </div>
+                  <h3 class="text-xl font-bold font-sans" style="color: #292524;">
+                    Formula Marketing Tanpa Budget
+                  </h3>
+                  <p class="text-sm opacity-80 leading-relaxed" style="color: #292524;">
+                    Dapatkan traffic organik dari platform seperti HackerNews, Reddit, dan X secara gratis.
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        
+        <section class="py-16 sm:py-24 border-b relative" style="border-color: #d9770610;">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div class="lg:col-span-5 flex justify-center">
+                
+                <div class="w-full max-w-xs aspect-[4/5] bg-slate-100 rounded-2xl border-2 border-dashed border-slate-300 flex flex-col items-center justify-center p-6 text-center">
+                  <svg class="w-10 h-10 text-slate-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                  <span class="text-xs font-bold text-slate-600 block">Voltzy</span>
+                </div>
+                
+              </div>
+
+              <div class="lg:col-span-7 space-y-6">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #292524; font-family: Playfair Display;">
+                  Memperkenalkan SaaS Launch Blueprint
+                </h2>
+                
+                <div class="space-y-4">
+                  <div class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-red-100 text-red-500 font-bold text-xs mt-1">1</div>
+                    <div>
+                      <h4 class="font-bold text-sm text-slate-500 uppercase font-mono">Fitur / Desain:</h4>
+                      <p class="text-base font-semibold" style="color: #292524;">Paket Belajar Komparatif Terlengkap</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-blue-100 text-blue-500 font-bold text-xs mt-1">2</div>
+                    <div>
+                      <h4 class="font-bold text-sm text-slate-500 uppercase font-mono">Manfaat yang Didapat:</h4>
+                      <p class="text-base font-semibold" style="color: #292524;">Membantu Anda bertransformasi dari seorang coder menjadi seorang Solo Founder yang mandiri secara finansial.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <div class="w-5 h-5 rounded-full shrink-0 flex items-center justify-center bg-emerald-100 text-emerald-500 font-bold text-xs mt-1">3</div>
+                    <div>
+                      <h4 class="font-bold text-sm text-slate-500 uppercase font-mono">Artinya Bagi Hidup Anda:</h4>
+                      <p class="text-lg font-bold" style="color: #d97706;">Artinya, Anda tidak perlu lagi bergantung pada klien freelance yang rewel atau pekerjaan korporat 9-to-5.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-4">
+                  <a href="#offers" class="px-8 py-3.5 rounded-xl text-center text-white font-extrabold text-base shadow-xl inline-block hover:opacity-90 transition-opacity" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+                    Lihat Paket Pembelian
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+      <section class="py-16 sm:py-24 border-b" style="border-color: #d9770610; background-color: #d9770603;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-yellow-100 text-yellow-800 animate-bounce">
+              🎁 Bonus Spesial Tambahan
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #292524; font-family: Playfair Display;">
+              Bonus Eksklusif Jika Anda Membeli Hari Ini
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            
+            <div class="p-6 rounded-2xl border bg-white shadow-lg relative overflow-hidden flex flex-col md:flex-row gap-6 items-center" style="border-color: #d9770615;">
+              <div class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl">
+                GRATIS (Senilai Rp 499.000)
+              </div>
+              <div class="w-24 h-24 shrink-0 bg-slate-50 rounded-xl flex items-center justify-center border-2 border-dashed border-slate-200">
+                
+                <svg class="w-8 h-8 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm-2 2a4 4 0 118 0M3 9a2 2 0 100-4 2 2 0 000 4zm18 0a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                
+              </div>
+              <div class="space-y-2 text-center md:text-left">
+                <h3 class="font-bold text-lg text-slate-900">SaaS Boilerplate Template (React & Node.js)</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">Kode sumber siap pakai untuk mempercepat pembuatan SaaS Anda.</p>
+              </div>
+            </div>
+            
+            <div class="p-6 rounded-2xl border bg-white shadow-lg relative overflow-hidden flex flex-col md:flex-row gap-6 items-center" style="border-color: #d9770615;">
+              <div class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl">
+                GRATIS (Senilai Rp 299.000)
+              </div>
+              <div class="w-24 h-24 shrink-0 bg-slate-50 rounded-xl flex items-center justify-center border-2 border-dashed border-slate-200">
+                
+                <svg class="w-8 h-8 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm-2 2a4 4 0 118 0M3 9a2 2 0 100-4 2 2 0 000 4zm18 0a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                
+              </div>
+              <div class="space-y-2 text-center md:text-left">
+                <h3 class="font-bold text-lg text-slate-900">Komunitas Discord Eksklusif</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">Gabung dengan ratusan solo founder lainnya untuk bertukar pikiran dan kolaborasi.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
+      <section class="py-16 sm:py-24 border-b bg-white" style="border-color: #d9770610;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #292524; font-family: Playfair Display;">
+              Kisah Sukses Mereka yang Sudah Memulai
+            </h2>
+            <p class="text-base sm:text-lg opacity-75" style="color: #292524;">
+              Berikut testimoni jujur dari pembaca kami yang berhasil merilis SaaS mereka.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            
+            <div class="p-8 rounded-2xl border bg-slate-50/50 shadow-md flex flex-col justify-between" style="border-color: #d9770610;">
+              <div class="space-y-4">
+                <div class="flex items-center gap-1">
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                </div>
+                <p class="text-sm italic text-slate-700 leading-relaxed">
+                  "Buku ini merubah cara pandang saya. Minggu lalu saya meluncurkan SaaS mini pertama saya dan hari ini sudah mendapat 3 pelanggan berbayar pertama!"
+                </p>
+              </div>
+              <div class="flex items-center gap-4 pt-6 border-t border-slate-150 mt-6">
+                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">
+                  A
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Andi Wijaya</h4>
+                  <p class="text-[11px] text-slate-500">Fullstack Developer</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-8 rounded-2xl border bg-slate-50/50 shadow-md flex flex-col justify-between" style="border-color: #d9770610;">
+              <div class="space-y-4">
+                <div class="flex items-center gap-1">
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                  <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  
+                </div>
+                <p class="text-sm italic text-slate-700 leading-relaxed">
+                  "Sangat direkomendasikan bagi yang ingin lepas dari jerat freelance. Langkah-langkahnya sangat praktikal dan tidak bertele-tele."
+                </p>
+              </div>
+              <div class="flex items-center gap-4 pt-6 border-t border-slate-150 mt-6">
+                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">
+                  S
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-slate-900">Siti Rahma</h4>
+                  <p class="text-[11px] text-slate-500">UI/UX Designer</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
+      <section id="offers" class="py-16 sm:py-24 border-b scroll-mt-20" style="border-color: #d9770610; background-color: #d9770605;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #292524; font-family: Playfair Display;">
+              Investasi Terbaik untuk Masa Depan Anda
+            </h2>
+            <p class="text-base sm:text-lg opacity-75" style="color: #292524;">
+              Pilih paket yang paling sesuai dengan kebutuhan belajar Anda sekarang.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+            
+            <div class="p-8 rounded-3xl border bg-white flex flex-col justify-between shadow-xl relative transition-transform hover:-translate-y-1 " style="border-color: #d9770620;">
+              
+              
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-2xl font-black text-slate-900">Ebook Only</h3>
+                  <p class="text-xs text-slate-500 mt-1">Buku digital SaaS Blueprint setebal 180 halaman format PDF & EPUB.</p>
+                </div>
+
+                <div class="flex items-baseline gap-2">
+                  <span class="text-4xl font-black text-slate-900">Rp 149.000</span>
+                  
+                  <span class="text-sm text-slate-400 line-through">Rp 299.000</span>
+                  
+                </div>
+
+                <ul class="space-y-3 pt-6 border-t border-slate-100">
+                  
+                  <li class="flex items-start gap-3 text-xs text-slate-600">
+                    <svg class="w-4 h-4 shrink-0 text-emerald-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Buku Digital (PDF/EPUB)</span>
+                  </li>
+                  
+                  <li class="flex items-start gap-3 text-xs text-slate-600">
+                    <svg class="w-4 h-4 shrink-0 text-emerald-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Akses Update Selamanya</span>
+                  </li>
+                  
+                  <li class="flex items-start gap-3 text-xs text-slate-600">
+                    <svg class="w-4 h-4 shrink-0 text-emerald-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Semua Template Spreadsheet Checklist</span>
+                  </li>
+                  
+                </ul>
+              </div>
+
+              <div class="pt-8 flex flex-col gap-2.5">
+                <a href="https://wa.me/628123456789?text=Halo%2C%20saya%20tertarik%20untuk%20membeli%20produk%20*Voltzy*%20-%20Paket%20*Ebook%20Only*%20seharga%20*Rp%20149.000*.%20Bagaimana%20langkah%20pembayaran%20selanjutnya%3F%20Terima%20kasih." class="w-full block text-center py-3.5 px-4 rounded-xl text-sm font-extrabold text-white shadow-lg transition-transform active:scale-95" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+                  Beli Paket Ebook
+                </a>
+                
+                <a href="https://wa.me/628123456789?text=Halo%2C%20saya%20tertarik%20untuk%20membeli%20produk%20*Voltzy*%20-%20Paket%20*Ebook%20Only*%20seharga%20*Rp%20149.000*.%20Bagaimana%20langkah%20pembayaran%20selanjutnya%3F%20Terima%20kasih." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 text-center py-3 px-4 rounded-xl text-xs font-bold text-emerald-600 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200/60 transition-all active:scale-95">
+                  <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.528 2.015 14.077 1.01 11.603 1.01c-5.41 0-9.82 4.363-9.824 9.795a9.69 9.69 0 001.5 5.1l-.988 3.605 3.756-.966z"/></svg>
+                  <span>Pesan / Tanya via WhatsApp</span>
+                </a>
+                
+              </div>
+            </div>
+            
+            <div class="p-8 rounded-3xl border bg-white flex flex-col justify-between shadow-xl relative transition-transform hover:-translate-y-1 ring-2 ring-offset-4" style="border-color: #d97706; --tw-ring-color: #d97706;">
+              
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+                PILIHAN TERPOPULER
+              </div>
+              
+              
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-2xl font-black text-slate-900">Founder Bundle</h3>
+                  <p class="text-xs text-slate-500 mt-1">Paket lengkap ebook ditambah video walkthrough 10 jam dan source code boilerplate.</p>
+                </div>
+
+                <div class="flex items-baseline gap-2">
+                  <span class="text-4xl font-black text-slate-900">Rp 299.000</span>
+                  
+                  <span class="text-sm text-slate-400 line-through">Rp 599.000</span>
+                  
+                </div>
+
+                <ul class="space-y-3 pt-6 border-t border-slate-100">
+                  
+                  <li class="flex items-start gap-3 text-xs text-slate-600">
+                    <svg class="w-4 h-4 shrink-0 text-emerald-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Semua Benefit Ebook Only</span>
+                  </li>
+                  
+                  <li class="flex items-start gap-3 text-xs text-slate-600">
+                    <svg class="w-4 h-4 shrink-0 text-emerald-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Video Walkthrough (10 Jam)</span>
+                  </li>
+                  
+                  <li class="flex items-start gap-3 text-xs text-slate-600">
+                    <svg class="w-4 h-4 shrink-0 text-emerald-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Boilerplate React & Node.js</span>
+                  </li>
+                  
+                  <li class="flex items-start gap-3 text-xs text-slate-600">
+                    <svg class="w-4 h-4 shrink-0 text-emerald-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Grup Discord Premium</span>
+                  </li>
+                  
+                  <li class="flex items-start gap-3 text-xs text-slate-600">
+                    <svg class="w-4 h-4 shrink-0 text-emerald-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Prioritas Email Support</span>
+                  </li>
+                  
+                </ul>
+              </div>
+
+              <div class="pt-8 flex flex-col gap-2.5">
+                <a href="https://wa.me/628123456789?text=Halo%2C%20saya%20tertarik%20untuk%20membeli%20produk%20*Voltzy*%20-%20Paket%20*Founder%20Bundle*%20seharga%20*Rp%20299.000*.%20Bagaimana%20langkah%20pembayaran%20selanjutnya%3F%20Terima%20kasih." class="w-full block text-center py-3.5 px-4 rounded-xl text-sm font-extrabold text-white shadow-lg transition-transform active:scale-95" style="background: linear-gradient(135deg, #d97706, #ea580c);">
+                  Beli Paket Founder
+                </a>
+                
+                <a href="https://wa.me/628123456789?text=Halo%2C%20saya%20tertarik%20untuk%20membeli%20produk%20*Voltzy*%20-%20Paket%20*Founder%20Bundle*%20seharga%20*Rp%20299.000*.%20Bagaimana%20langkah%20pembayaran%20selanjutnya%3F%20Terima%20kasih." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 text-center py-3 px-4 rounded-xl text-xs font-bold text-emerald-600 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200/60 transition-all active:scale-95">
+                  <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.528 2.015 14.077 1.01 11.603 1.01c-5.41 0-9.82 4.363-9.824 9.795a9.69 9.69 0 001.5 5.1l-.988 3.605 3.756-.966z"/></svg>
+                  <span>Pesan / Tanya via WhatsApp</span>
+                </a>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
+      <section class="py-16 sm:py-24 border-b bg-white" style="border-color: #d9770610;">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 space-y-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" style="color: #292524; font-family: Playfair Display;">
+              Pertanyaan yang Sering Diajukan (FAQ)
+            </h2>
+          </div>
+
+          <div class="space-y-4">
+            
+            <div class="border rounded-2xl bg-slate-50/50 hover:bg-slate-50 transition-colors" style="border-color: #d9770615;">
+              <button onclick="toggleFaq(0)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                <span class="font-bold text-base text-slate-900">Apakah materi ini ramah pemula?</span>
+                <svg id="faq-icon-0" class="w-5 h-5 text-slate-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              <div id="faq-content-0" class="hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t pt-4 border-slate-100">
+                Ya, betul. Kami menjelaskan konsep dari dasar. Namun, memiliki pemahaman dasar tentang pemrograman web akan sangat membantu Anda mengikuti bagian teknis.
+              </div>
+            </div>
+            
+            <div class="border rounded-2xl bg-slate-50/50 hover:bg-slate-50 transition-colors" style="border-color: #d9770615;">
+              <button onclick="toggleFaq(1)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                <span class="font-bold text-base text-slate-900">Apakah ada jaminan uang kembali?</span>
+                <svg id="faq-icon-1" class="w-5 h-5 text-slate-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              <div id="faq-content-1" class="hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t pt-4 border-slate-100">
+                Tentu saja. Jika Anda merasa materi kami tidak memberikan manfaat, hubungi kami dalam waktu 14 hari setelah pembelian untuk refund 100% tanpa ribet.
+              </div>
+            </div>
+            
+            <div class="border rounded-2xl bg-slate-50/50 hover:bg-slate-50 transition-colors" style="border-color: #d9770615;">
+              <button onclick="toggleFaq(2)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                <span class="font-bold text-base text-slate-900">Bagaimana cara mengakses bonusnya?</span>
+                <svg id="faq-icon-2" class="w-5 h-5 text-slate-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              <div id="faq-content-2" class="hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t pt-4 border-slate-100">
+                Semua bonus, tautan repositori boilerplate, dan undangan Discord eksklusif akan dikirimkan otomatis ke email Anda sesaat setelah pembayaran berhasil dikonfirmasi.
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
+    <footer class="py-12 border-t" style="background-color: #fffdfa; border-color: #d9770610;">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2">
+          <span class="font-black text-lg" style="color: #d97706; font-family: Playfair Display;">SaaS Blueprint</span>
+          <span class="text-xs text-slate-400">© 2026 SaaS Blueprint. Hak Cipta Dilindungi Undang-Undang.</span>
+        </div>
+        <div class="flex flex-wrap gap-6 text-xs text-slate-500 font-semibold justify-center">
+          <a href="#" class="hover:underline">Syarat & Ketentuan</a><a href="#" class="hover:underline">Kebijakan Privasi</a><a href="#" class="hover:underline">Kontak Support</a>
+        </div>
+      </div>
+    </footer>
+    
+
+  <script>
+    function toggleFaq(index) {
+      const content = document.getElementById('faq-content-' + index);
+      const icon = document.getElementById('faq-icon-' + index);
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    let activeDateIdx = 0;
+    let activeTimeStr = '09:00';
+
+    function selectDate(idx) {
+      // Reset past active
+      const pastActive = document.getElementById('date-btn-' + activeDateIdx);
+      if (pastActive) {
+        pastActive.className = "p-2.5 rounded-2xl border border-slate-200 bg-white text-slate-800 text-center transition-all hover:bg-slate-50 hover:border-slate-300 cursor-pointer";
+        const dayLabel = pastActive.querySelector('span:first-child');
+        if (dayLabel) dayLabel.className = "block text-[9px] font-bold tracking-widest uppercase opacity-75 text-slate-400 font-mono";
+      }
+
+      activeDateIdx = idx;
+
+      // Set new active
+      const newActive = document.getElementById('date-btn-' + idx);
+      if (newActive) {
+        newActive.className = "p-2.5 rounded-2xl border text-center transition-all bg-indigo-600 border-indigo-600 text-white cursor-pointer";
+        const dayLabel = newActive.querySelector('span:first-child');
+        if (dayLabel) dayLabel.className = "block text-[9px] font-bold tracking-widest uppercase opacity-75 font-mono";
+      }
+    }
+
+    function selectTime(timeStr) {
+      // Reset past active time
+      const pastActiveTime = document.getElementById('time-btn-' + activeTimeStr.replace(':', '-'));
+      if (pastActiveTime) {
+        pastActiveTime.className = "py-2 rounded-xl text-[11px] font-black text-center transition-all border border-slate-200 text-slate-600 hover:bg-slate-50 cursor-pointer";
+      }
+
+      activeTimeStr = timeStr;
+
+      // Set new active time
+      const newActiveTime = document.getElementById('time-btn-' + timeStr.replace(':', '-'));
+      if (newActiveTime) {
+        newActiveTime.className = "py-2 rounded-xl text-[11px] font-black text-center transition-all border border-indigo-600 bg-indigo-50 text-indigo-700 cursor-pointer";
+      }
+    }
+
+    function confirmBooking() {
+      const nameInput = document.getElementById('booking-name');
+      if (!nameInput || !nameInput.value.trim()) {
+        alert('Silakan masukkan nama lengkap Anda terlebih dahulu.');
+        if (nameInput) nameInput.focus();
+        return;
+      }
+
+      const overlay = document.getElementById('booking-success-overlay');
+      if (overlay) {
+        overlay.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+        overlay.classList.add('translate-y-0', 'opacity-100');
+      }
+    }
+
+    function resetBooking() {
+      const overlay = document.getElementById('booking-success-overlay');
+      if (overlay) {
+        overlay.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+        overlay.classList.remove('translate-y-0', 'opacity-100');
+      }
+      const nameInput = document.getElementById('booking-name');
+      if (nameInput) nameInput.value = '';
+    }
+  </script>
+</body>
+</html>
