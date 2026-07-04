@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom Scrollbar - Sleek and Minimalist (Vercel Style) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.premium-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.premium-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.premium-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+}
+.premium-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* Premium SaaS Input - Flat, dark zinc surfaces, sharp borders (Linear/Vercel Style) */
+@utility premium-input {
+  background-color: #0c0c0e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: #f4f4f5;
+  transition: all 0.12s ease-out;
+  
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  &:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background-color: #09090b;
+  }
+  
+  &::placeholder {
+    color: rgba(161, 161, 170, 0.35);
+  }
+}
+
+/* Premium SaaS Select - Linear/Vercel Style */
+@utility premium-select {
+  background-color: #0c0c0e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding-left: 0.875rem;
+  padding-right: 2.25rem;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: #f4f4f5;
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2371717a' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  background-size: 0.75rem;
+  transition: all 0.12s ease-out;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  &:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background-color: #09090b;
+  }
+}
+
+/* Elegant, flat surface cards for quiet visual structure */
+@utility glass-card {
+  background-color: #121214;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.15s ease-out;
+}
+
+@utility glass-panel {
+  background-color: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Transitions & Micro-interactions */
+.transition-smooth {
+  transition: all 0.15s ease-out;
+}
+
+/* Clean Active Highlight */
+.active-ring-glow {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Bouncy scale transition - toned down to a subtle SaaS click/hover state */
+.bouncy-hover {
+  transition: all 0.12s ease-out;
+}
+.bouncy-hover:hover {
+  transform: translateY(-0.5px);
+  filter: brightness(1.05);
+}
+.bouncy-hover:active {
+  transform: translateY(0px);
+  filter: brightness(0.95);
+}
+
+/* Card hover elevations without neon effects */
+.card-hover-elevation {
+  transition: all 0.12s ease-out;
+}
+.card-hover-elevation:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Minimalist gray badges */
+.badge-indigo {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e4e4e7;
+}
+
+.badge-purple {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e4e4e7;
+}
+
+.badge-cyan {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e4e4e7;
+}
